@@ -1,0 +1,133 @@
+body
+    margin: 0
+    padding: 0
+
+html, 
+body
+    width: 100%
+    height: 100%
+    background: #0b0b21
+    color: #777
+    font-size: 10px
+    font-family: 'Montserrat', sans-serif
+
+*
+    box-sizing: border-box
+    hyphens: auto
+
+*, 
+::after, 
+::before
+    transition-timing-function: cubic-bezier(0.69, 0, 0, 1) !important
+    animation-timing-function: cubic-bezier(0.69, 0, 0, 1) !important
+
+::selection
+    color: #fff
+    background: #4d4dc9
+    text-shadow: none
+
+.wrapper
+    max-width: 155rem
+    margin: 0 auto
+    padding: 0 3rem
+
+.page-enter-active, .page-leave-active
+  transition: all .75s cubic-bezier(0.69, 0, 0, 1)
+
+.page-enter, .page-leave-to 
+  opacity: 0
+
+button
+    font-size: 1.6rem
+    font-family: 'Montserrat', sans-serif
+    font-weight: 600
+    padding: 1.25rem 6rem
+    border: .175rem rgba(110,166,46,.5) solid
+    background-color: #4d4dc9
+    color: #fff
+    transition: all .25s cubic-bezier(0.65, 0.05, 0.36, 1)
+
+button:hover
+    background-color: #143900
+    cursor: pointer
+
+a 
+    text-decoration: none
+    color: #4d4dc9
+    position: relative
+
+a:hover::after 
+    transform: scaleX(1)
+    transform-origin: right
+
+a::after 
+    content: ""
+    position: absolute
+    bottom: -.3rem
+    left: 0
+    width: 100%
+    height: .1rem
+    background-color: #4d4dc9
+    transition: transform .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+    transform: scaleX(0)
+    transform-origin: left
+
+.global-nav
+    width: 100%
+    background: transparent
+    position: fixed
+    font-size: 1.4rem
+    font-weight: 500
+    display: flex
+    align-items: center
+    padding: 2rem 4rem
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+    z-index: 1500
+
+.global-nav .logo-ub
+    width: 125px
+    height: 4rem
+    background: url('https://apex.uwe-barthel.net/images/schriftzug-w.png')
+    background-size: cover
+    display: block
+
+.global-nav .logo-ub::after
+    content: none
+
+.global-nav .page-nav
+    margin: 0 auto
+
+.global-nav .page-nav a
+    margin: 0 4rem
+    color: #fff
+
+.global-nav .page-nav a::after
+    background: #fff
+
+.global-nav .social-nav
+    font-size: 2.5rem
+
+.global-nav .social-nav a
+    margin: 0 1.5rem
+
+.global-nav .social-nav a::after
+    content: none
+
+.move
+    background: #12123b
+
+.app-hero .app-plane
+    width: 100%
+    height: 57rem
+    background: #0d0d2a
+    position: absolute
+
+.app-hero .app-bg-frontpage
+    width: 100%
+    top: 15rem
+    height: 62rem
+    background: #0f0f32
+    background-size: cover
+    background-position: center
+    position: relative
+    box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
