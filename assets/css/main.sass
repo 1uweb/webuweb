@@ -29,7 +29,7 @@ body
 .wrapper
     max-width: 155rem
     margin: 0 auto
-    padding: 0 3rem
+    padding: 0 1.5rem
 
 .page-enter-active, .page-leave-active
   transition: all .75s cubic-bezier(0.69, 0, 0, 1)
@@ -72,6 +72,52 @@ a::after
     transform: scaleX(0)
     transform-origin: left
 
+.bar-wrapper--big
+  width: .1rem
+  height: 7.5rem
+  position: absolute
+  left: calc(50% - .2rem)
+  -webkit-transform: translateX(-50%)
+  transform: translateX(-50%)
+  margin-top: 0
+  cursor: pointer
+  bottom: 2.14286rem
+  left: calc(50% - .1rem)
+  z-index: 100
+
+.bar--big-whitespace
+  margin: 0 auto
+  overflow: hidden
+  z-index: 1
+
+.bar--big-line 
+  background-color: #26265d
+  left: 0
+  top: 0
+  -webkit-animation: slide-big-down 2s steps(100) infinite
+  animation: slide-big-down 2s steps(100) infinite
+
+.bar--big-line, .bar--big-whitespace
+  height: 100%
+  width: 100%
+  position: absolute
+
+@-webkit-keyframes slide-big-down 
+  0%
+    -webkit-transform: translateY(-100%)
+    transform: translateY(-100%)
+  to 
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+
+@keyframes slide-big-down 
+  0%
+    -webkit-transform: translateY(-100%)
+    transform: translateY(-100%)
+  to
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+
 .global-nav
     width: 100%
     background: transparent
@@ -81,7 +127,7 @@ a::after
     display: flex
     align-items: center
     padding: 2rem 4rem
-    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+    transition: all .75s cubic-bezier(0.65, 0.05, 0.36, 1)
     z-index: 1500
 
 .global-nav .logo-ub
@@ -116,10 +162,19 @@ a::after
 .move
     background: #12123b
 
+.app-hero, .page-hero
+    position: relative
+    width: 100%
+    height: 80rem
+    display: block
+    margin: 0 0 8rem 0
+
 .app-hero .app-plane
     width: 100%
     height: 57rem
     background: #0d0d2a
+    background-size: cover
+    background-position: top
     position: absolute
 
 .app-hero .app-bg-frontpage
@@ -131,3 +186,94 @@ a::after
     background-position: center
     position: relative
     box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
+
+.page-hero .app-plane
+    width: 100%
+    height: 42rem
+    background: #0d0d2a
+    background-size: cover
+    background-position: center
+    position: absolute
+
+.page-hero .app-bg-frontpage
+    width: 100%
+    top: 15rem
+    height: 54rem
+    background: #0f0f32
+    background-size: cover
+    background-position: center
+    position: relative
+    box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
+
+.informationen .erfahrung
+    list-style: none
+    padding: 0
+
+.informationen .erfahrung li
+    line-height: 5
+
+.informationen
+    padding: 0 0 8rem 0
+
+.informationen-home
+    padding-top: 8rem
+
+.informationen-home h1
+    font-size: 4rem
+
+.informationen-home p
+    font-size: 1.4rem
+    line-height: 1.75
+    font-weight: 300
+
+.informationen h1
+    font-size: 4rem
+    color: #fff
+
+.informationen h2
+    font-size: 3rem
+
+.informationen h3
+    font-size: 2rem
+
+.informationen p
+    font-size: 1.4rem
+    line-height: 1.75
+    font-weight: 300
+
+.informationen ul
+    font-size: 1.4rem
+    line-height: 2.5
+
+.informationen ul li
+    font-weight: 500
+
+.informationen ul li ul li
+    font-weight: 300
+
+footer
+    width: 100%
+    background: transparent
+    position: relative
+    background: #12123b
+    font-size: 1.4rem
+    font-weight: 500
+    display: flex
+    align-items: center
+    padding: 5rem 4rem
+    transition: all 0.75s cubic-bezier(0.65, 0.05, 0.36, 1)
+    z-index: 1500
+
+footer .legal a
+    margin: 0 4rem 0 0
+    color: #fff
+
+footer .legal a::after
+    background-color: #fff
+
+footer .version
+    margin: 0 auto
+    visibility: hidden
+
+footer .copyright
+    font-weight: 500
