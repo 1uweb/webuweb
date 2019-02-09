@@ -5,13 +5,15 @@
       <section class="page-hero">
         <div
           class="app-plane"
-          style="background-image: linear-gradient(to bottom, rgba(11,11,33,.75), rgba(11,11,33,1)), url('https://apex.uwe-barthel.net/images/city-artwork.6e390e17b9da69d4c28ce24a8164ffc1.jpg')"
+          style="background-image: linear-gradient(to bottom, rgba(11,11,33,.75), rgba(11,11,33,1)), url('https://apex.uwe-barthel.net/images/high-sierra-wallpaper.wMfdqHa.jpg')"
         ></div>
         <div class="wrapper">
           <div
             class="app-bg-frontpage wrapper"
-            style="background-image: url('https://apex.uwe-barthel.net/images/city-artwork.6e390e17b9da69d4c28ce24a8164ffc1.jpg')"
-          ></div>
+            style="background-image: url('https://apex.uwe-barthel.net/images/high-sierra-wallpaper.wMfdqHa.jpg')"
+          >
+            <span class="copy">Bild: Apple | macOS High Sierra</span>
+          </div>
         </div>
         <span class="bar-wrapper--big">
           <span class="bar--big-whitespace">

@@ -124,39 +124,42 @@ a::after
     position: fixed
     font-size: 1.4rem
     font-weight: 500
-    display: flex
-    align-items: center
+    display: block
     padding: 2rem 4rem
     transition: all .75s cubic-bezier(0.65, 0.05, 0.36, 1)
     z-index: 1500
 
-.global-nav .logo-ub
+.global-nav .desktop .logo-ub
     width: 125px
     height: 4rem
     background: url('https://apex.uwe-barthel.net/images/schriftzug-w.png')
     background-size: cover
     display: block
 
-.global-nav .logo-ub::after
+.global-nav .desktop
+    display: flex
+    align-items: center
+
+.global-nav .desktop .logo-ub::after
     content: none
 
-.global-nav .page-nav
+.global-nav .desktop .page-nav
     margin: 0 auto
 
-.global-nav .page-nav a
+.global-nav .desktop .page-nav a
     margin: 0 4rem
     color: #fff
 
-.global-nav .page-nav a::after
+.global-nav .desktop .page-nav a::after
     background: #fff
 
-.global-nav .social-nav
+.global-nav .desktop .social-nav
     font-size: 2.5rem
 
-.global-nav .social-nav a
+.global-nav .desktop .social-nav a
     margin: 0 1.5rem
 
-.global-nav .social-nav a::after
+.global-nav .desktop .social-nav a::after
     content: none
 
 .move
@@ -168,6 +171,8 @@ a::after
     height: 80rem
     display: block
     margin: 0 0 8rem 0
+    color: #FFF
+    text-shadow: 0 .5rem 5rem rgba(0,0,0,1)
 
 .app-hero .app-plane
     width: 100%
@@ -181,11 +186,21 @@ a::after
     width: 100%
     top: 15rem
     height: 62rem
+    display: flex
+    align-items: flex-end
     background: #0f0f32
     background-size: cover
     background-position: center
     position: relative
     box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
+
+.app-hero .app-bg-frontpage span
+    display: flex
+    justify-content: center
+    width: 100%
+    font-size: 1.2rem
+    font-weight: 600
+    margin: 0 0 2rem 0
 
 .page-hero .app-plane
     width: 100%
@@ -199,11 +214,22 @@ a::after
     width: 100%
     top: 15rem
     height: 54rem
+    display: flex
+    align-items: flex-end
     background: #0f0f32
     background-size: cover
     background-position: center
     position: relative
     box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
+
+.page-hero .app-bg-frontpage span
+    display: flex
+    justify-content: center
+    width: 100%
+    font-size: 1.3rem
+    text-shadow: 0 .5rem 5rem rgba(0,0,0,1)
+    font-weight: 600
+    margin: 0 0 2rem 0
 
 .informationen .erfahrung
     list-style: none
@@ -232,9 +258,11 @@ a::after
 
 .informationen h2
     font-size: 3rem
+    color: #fff
 
 .informationen h3
     font-size: 2rem
+    color: #fff
 
 .informationen p
     font-size: 1.4rem
@@ -248,8 +276,52 @@ a::after
 .informationen ul li
     font-weight: 500
 
-.informationen ul li ul li
+.informationen ul li ul
     font-weight: 300
+
+.grid-portfolio
+    width: 100%
+    height: auto
+
+.grid-portfolio .grid
+    display: block
+    width: 100%
+    height: 100%
+    list-style: none
+    padding: 0
+    text-align: center
+    overflow: hidden
+
+.grid-portfolio .grid .grid-item
+    display: flex
+    align-items: center
+    position: relative
+    width: 100%
+    height: 34rem
+    background: #0f0f32
+    background-size: cover
+    background-position: center
+    margin: 2rem 0
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+
+.grid-portfolio .grid .grid-item:hover
+    height: 44rem
+
+.grid-portfolio .grid .grid-item .img-portfolio
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    background-size: cover
+    background-position: center
+    padding: 0 6rem
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+
+.grid-portfolio .grid .grid-item .img-portfolio::after
+    content: none
+
+.grid-portfolio .grid .grid-item .img-portfolio:hover
+    box-shadow: 0 0 2.5rem rgba(0,0,0,.5)
 
 footer
     width: 100%
