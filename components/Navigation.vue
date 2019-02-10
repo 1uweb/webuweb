@@ -5,7 +5,6 @@
       <nav class="page-nav">
         <nuxt-link to="/ueber">Über</nuxt-link>
         <a href="https://blog.uwe-barthel.net" target="_blank">Blog</a>
-        <nuxt-link to="/kontakt">Kontakt</nuxt-link>
       </nav>
       <nav class="social-nav">
         <a href="http://be.net/uwe-barthel">

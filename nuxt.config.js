@@ -15,8 +15,8 @@ module.exports = {
     ],
     script: [
       { src: 'https://apex.uwe-barthel.net/scripts/jquery.min.js' },
+      { src: 'https://apex.uwe-barthel.net/scripts/move.js' },
       { src: 'https://apex.uwe-barthel.net/scripts/globalnav-move.js' },
-      { src: 'https://apex.uwe-barthel.net/scripts/move.js' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
