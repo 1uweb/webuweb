@@ -2,7 +2,7 @@ body
     margin: 0
     padding: 0
 
-html, 
+html,
 body
     width: 100%
     height: 100%
@@ -11,12 +11,23 @@ body
     font-size: 10px
     font-family: 'Montserrat', sans-serif
 
+::-webkit-scrollbar
+    width: 1.5rem
+
+::-webkit-scrollbar-thumb
+    background: #2c2c65
+
+::-webkit-scrollbar-track
+    background: #13133e
+    -webkit-box-shadow: inset 0 0 5px #2c2c65
+    box-shadow: inset 0 0 5px #2c2c65
+
 *
     box-sizing: border-box
     hyphens: auto
 
-*, 
-::after, 
+*,
+::after,
 ::before
     transition-timing-function: cubic-bezier(0.69, 0, 0, 1) !important
     animation-timing-function: cubic-bezier(0.69, 0, 0, 1) !important
@@ -34,89 +45,27 @@ body
 .page-enter-active, .page-leave-active
   transition: all .75s cubic-bezier(0.69, 0, 0, 1)
 
-.page-enter, .page-leave-to 
+.page-enter, .page-leave-to
   opacity: 0
 
-button
-    font-size: 1.6rem
-    font-family: 'Montserrat', sans-serif
-    font-weight: 600
-    padding: 1.25rem 6rem
-    border: .175rem rgba(110,166,46,.5) solid
-    background-color: #4d4dc9
-    color: #fff
-    transition: all .25s cubic-bezier(0.65, 0.05, 0.36, 1)
-
-button:hover
-    background-color: #143900
-    cursor: pointer
-
-a 
+a
     text-decoration: none
     color: #4d4dc9
     position: relative
-
-a:hover::after 
-    transform: scaleX(1)
-    transform-origin: right
-
-a::after 
-    content: ""
-    position: absolute
-    bottom: -.3rem
-    left: 0
-    width: 100%
-    height: .1rem
-    background-color: #4d4dc9
-    transition: transform .5s cubic-bezier(0.65, 0.05, 0.36, 1)
-    transform: scaleX(0)
-    transform-origin: left
-
-.bar-wrapper--big
-  width: .1rem
-  height: 7.5rem
-  position: absolute
-  left: calc(50% - .2rem)
-  -webkit-transform: translateX(-50%)
-  transform: translateX(-50%)
-  margin-top: 0
-  cursor: pointer
-  bottom: 2.14286rem
-  left: calc(50% - .1rem)
-  z-index: 100
-
-.bar--big-whitespace
-  margin: 0 auto
-  overflow: hidden
-  z-index: 1
-
-.bar--big-line 
-  background-color: #26265d
-  left: 0
-  top: 0
-  -webkit-animation: slide-big-down 2s steps(100) infinite
-  animation: slide-big-down 2s steps(100) infinite
-
-.bar--big-line, .bar--big-whitespace
-  height: 100%
-  width: 100%
-  position: absolute
-
-@-webkit-keyframes slide-big-down 
-  0%
-    -webkit-transform: translateY(-100%)
-    transform: translateY(-100%)
-  to 
-    -webkit-transform: translateY(100%)
-    transform: translateY(100%)
-
-@keyframes slide-big-down 
-  0%
-    -webkit-transform: translateY(-100%)
-    transform: translateY(-100%)
-  to
-    -webkit-transform: translateY(100%)
-    transform: translateY(100%)
+    &:hover::after
+        transform: scaleX(1)
+        transform-origin: right
+    &::after
+        content: ""
+        position: absolute
+        bottom: -.3rem
+        left: 0
+        width: 100%
+        height: .1rem
+        background-color: #4d4dc9
+        transition: transform .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+        transform: scaleX(0)
+        transform-origin: left
 
 .global-nav
     width: 100%
@@ -128,39 +77,30 @@ a::after
     padding: 2rem 4rem
     transition: all .75s cubic-bezier(0.65, 0.05, 0.36, 1)
     z-index: 1500
-
-.global-nav .desktop .logo-ub
-    width: 125px
-    height: 4rem
-    background: url('https://apex.uwe-barthel.net/images/schriftzug-w.png')
-    background-size: cover
-    display: block
-
-.global-nav .desktop
-    display: flex
-    align-items: center
-
-.global-nav .desktop .logo-ub::after
-    content: none
-
-.global-nav .desktop .page-nav
-    margin: 0 auto
-
-.global-nav .desktop .page-nav a
-    margin: 0 4rem
-    color: #fff
-
-.global-nav .desktop .page-nav a::after
-    background: #fff
-
-.global-nav .desktop .social-nav
-    font-size: 2.5rem
-
-.global-nav .desktop .social-nav a
-    margin: 0 1.5rem
-
-.global-nav .desktop .social-nav a::after
-    content: none
+    .desktop
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .logo-ub
+            width: 125px
+            height: 4rem
+            background: url('https://apex.uwe-barthel.net/images/schriftzug-w.png')
+            background-size: cover
+            display: block
+            &::after
+                content: none
+    .page-nav
+        a
+            margin: 0 4rem
+            color: #fff
+        &::after
+            background: #fff
+    .social-nav
+        font-size: 2.5rem
+        a
+            margin: 0 1.5rem
+        &::after
+            content: none
 
 .move
     background: #12123b
@@ -174,154 +114,136 @@ a::after
     color: #FFF
     text-shadow: 0 .5rem 5rem rgba(0,0,0,1)
 
-.app-hero .app-plane
-    width: 100%
-    height: 57rem
-    background: #0d0d2a
-    background-size: cover
-    background-position: top
-    position: absolute
+.app-hero
+    .app-plane
+        width: 100%
+        height: 57rem
+        background: #0d0d2a
+        background-size: cover
+        background-position: top
+        position: absolute
+    .app-bg-frontpage
+        width: 100%
+        top: 15rem
+        height: 62rem
+        display: flex
+        align-items: flex-end
+        background: #0f0f32
+        background-size: cover
+        background-position: center
+        position: relative
+        box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
+        span
+            display: flex
+            justify-content: center
+            width: 100%
+            font-size: 1.2rem
+            font-weight: 600
+            margin: 0 0 2rem 0
 
-.app-hero .app-bg-frontpage
-    width: 100%
-    top: 15rem
-    height: 62rem
-    display: flex
-    align-items: flex-end
-    background: #0f0f32
-    background-size: cover
-    background-position: center
-    position: relative
-    box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
-
-.app-hero .app-bg-frontpage span
-    display: flex
-    justify-content: center
-    width: 100%
-    font-size: 1.2rem
-    font-weight: 600
-    margin: 0 0 2rem 0
-
-.page-hero .app-plane
-    width: 100%
-    height: 42rem
-    background: #0d0d2a
-    background-size: cover
-    background-position: center
-    position: absolute
-
-.page-hero .app-bg-frontpage
-    width: 100%
-    top: 15rem
-    height: 54rem
-    display: flex
-    align-items: flex-end
-    background: #0f0f32
-    background-size: cover
-    background-position: center
-    position: relative
-    box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
-
-.page-hero .app-bg-frontpage span
-    display: flex
-    justify-content: center
-    width: 100%
-    font-size: 1.3rem
-    text-shadow: 0 .5rem 5rem rgba(0,0,0,1)
-    font-weight: 600
-    margin: 0 0 2rem 0
-
-.informationen .erfahrung
-    list-style: none
-    padding: 0
-
-.informationen .erfahrung li
-    line-height: 5
+.page-hero
+    .app-plane
+        width: 100%
+        height: 42rem
+        background: #0d0d2a
+        background-size: cover
+        background-position: center
+        position: absolute
+    .app-bg-frontpage
+        width: 100%
+        top: 15rem
+        height: 54rem
+        display: flex
+        align-items: flex-end
+        background: #0f0f32
+        background-size: cover
+        background-position: center
+        position: relative
+        box-shadow: 0 0 2.5rem rgba(0,0,0,.15)
+        span
+            display: flex
+            justify-content: center
+            width: 100%
+            font-size: 1.3rem
+            text-shadow: 0 .5rem 5rem rgba(0,0,0,1)
+            font-weight: 600
+            margin: 0 0 2rem 0
 
 .informationen
     padding: 0 0 8rem 0
+    h1
+        font-size: 4rem
+        color: #fff
+    h2
+        font-size: 3rem
+        color: #fff
+    h3
+        font-size: 2rem
+        color: #fff
+    p
+        font-size: 1.4rem
+        line-height: 1.75
+        font-weight: 300
+    ul
+        font-size: 1.4rem
+        line-height: 2.5
+    li
+        font-weight: 500
+    ul
+        font-weight: 300
+    .erfahrung
+        list-style: none
+        padding: 0
+        li
+            line-height: 5
 
 .informationen-home
     padding-top: 8rem
+    h1
+        font-size: 4rem
 
-.informationen-home h1
-    font-size: 4rem
-
-.informationen-home p
-    font-size: 1.4rem
-    line-height: 1.75
-    font-weight: 300
-
-.informationen h1
-    font-size: 4rem
-    color: #fff
-
-.informationen h2
-    font-size: 3rem
-    color: #fff
-
-.informationen h3
-    font-size: 2rem
-    color: #fff
-
-.informationen p
-    font-size: 1.4rem
-    line-height: 1.75
-    font-weight: 300
-
-.informationen ul
-    font-size: 1.4rem
-    line-height: 2.5
-
-.informationen ul li
-    font-weight: 500
-
-.informationen ul li ul
-    font-weight: 300
+    p
+        font-size: 1.4rem
+        line-height: 1.75
+        font-weight: 300
 
 .grid-portfolio
     width: 100%
     height: auto
-
-.grid-portfolio .grid
-    display: block
-    width: 100%
-    height: 100%
-    list-style: none
-    padding: 0
-    text-align: center
-    overflow: hidden
-
-.grid-portfolio .grid .grid-item
-    display: flex
-    align-items: center
-    position: relative
-    width: 100%
-    height: 34rem
-    background: #0f0f32
-    background-size: cover
-    background-position: center
-    margin: 2rem 0
-    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1)
-
-.grid-portfolio .grid .grid-item:hover
-    height: 44rem
-
-.grid-portfolio .grid .grid-item .img-portfolio
-    width: 100%
-    height: 100%
-    display: flex
-    align-items: center
-    background-size: cover
-    background-position: center
-    padding: 0 6rem
-    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1)
-
-.grid-portfolio .grid .grid-item .img-portfolio::after
-    content: none
-
-.grid-portfolio .grid .grid-item .img-portfolio:hover
-    box-shadow: 0 0 2.5rem rgba(0,0,0,.5)
+    .grid
+        display: block
+        width: 100%
+        height: 100%
+        list-style: none
+        padding: 0
+        text-align: center
+        overflow: hidden
+        .grid-item
+            display: flex
+            align-items: center
+            position: relative
+            width: 100%
+            height: 34rem
+            background: #0f0f32
+            background-size: cover
+            background-position: center
+            margin: 2rem 0
+            transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+            &:hover
+                height: 44rem
+        .img-portfolio
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            background-size: cover
+            background-position: center
+            padding: 0 6rem
+            transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+            &::after
+                content: none
+            &:hover
+                box-shadow: 0 0 2.5rem rgba(0,0,0,.5)
 
 footer
     width: 100%

@@ -5,14 +5,14 @@
       <section class="app-hero">
         <div
           class="app-plane"
-          style="background-image: linear-gradient(to bottom, rgba(11,11,33,.75), rgba(11,11,33,1)), url('https://apex.uwe-barthel.net/images/wallpaper_mikael_gustafsson.54adfa15611.png')"
+          style="background-image: linear-gradient(to bottom, rgba(11,11,33,.75), rgba(11,11,33,1)), url('https://apex.uwe-barthel.net/images/pawel-czerwinski-1311900-unsplash.Oip88jj089.jpg')"
         ></div>
         <div class="wrapper">
           <div
             class="app-bg-frontpage"
-            style="background-image: url('https://apex.uwe-barthel.net/images/wallpaper_mikael_gustafsson.54adfa15611.png')"
+            style="background-image: url('https://apex.uwe-barthel.net/images/pawel-czerwinski-1311900-unsplash.Oip88jj089.jpg')"
           >
-            <span class="copy">Bild: Mikael Gustafsson</span>
+            <span class="copy">Pawel Czerwinski</span>
           </div>
         </div>
       </section>
@@ -31,7 +31,8 @@
             </li>
             <li class="grid-item">
               <a
-                href="http://beta.sv-hohenfichte.de"
+                href="https://sv-hohenfichte.de"
+                target="_blank"
                 style="background-image: linear-gradient(to bottom, rgba(11,11,33,.25), rgba(11,11,33,.75)), url('https://apex.uwe-barthel.net/images/sv-hohenfichte-v2.15aweDAWs2551.jpg'); background-position: top;"
                 class="img-portfolio"
               >

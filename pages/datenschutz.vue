@@ -5,14 +5,14 @@
       <section class="page-hero">
         <div
           class="app-plane"
-          style="background-image: linear-gradient(to bottom, rgba(11,11,33,.75), rgba(11,11,33,1)), url('https://apex.uwe-barthel.net/images/dauntless-artwork-pangar.a445sdfas54DS1d.jpg')"
+          style="background-image: linear-gradient(to bottom, rgba(11,11,33,.75), rgba(11,11,33,1)), url('https://apex.uwe-barthel.net/images/pawel-czerwinski-1538544-unsplash.8hGfv781.jpg')"
         ></div>
         <div class="wrapper">
           <div
             class="app-bg-frontpage wrapper"
-            style="background-image: url('https://apex.uwe-barthel.net/images/dauntless-artwork-pangar.a445sdfas54DS1d.jpg')"
+            style="background-image: url('https://apex.uwe-barthel.net/images/pawel-czerwinski-1538544-unsplash.8hGfv781.jpg')"
           >
-            <span class="copy">©Phoenix Labs | Dauntless</span>
+            <span class="copy">Pawel Czerwinski</span>
           </div>
         </div>
         <span class="bar-wrapper--big">
